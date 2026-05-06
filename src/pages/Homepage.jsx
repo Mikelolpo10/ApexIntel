@@ -73,7 +73,7 @@ export default function ApexInsightHomepage() {
 
         {/* Header */}
         <header className="bg-overlay-gray-heavy backdrop-blur-sm border-b border-white/10 sticky top-0 z-50">
-          <div className="max-w-7xl mx-auto px-6 py-4">
+          <div className="max-w-7xl mx-auto px-6 py-3">
             <div className="flex items-center">
               {/* Brand */}
               <div className="mr-auto md:mr-8 flex items-center">
@@ -96,7 +96,7 @@ export default function ApexInsightHomepage() {
                 ))}
               </nav>
 
-              <input type="text" placeholder='Search' className='py-1 px-2 hidden md:flex items-center rounded-lg bg-overlay-gray-light' />
+              <input type="text" placeholder='Search' className='py-1 px-2 hidden md:flex items-center rounded-md bg-overlay-gray-light text-sm' />
 
               {/* Mobile Menu Button */}
               <button className="md:hidden text-white">
