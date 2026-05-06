@@ -18,6 +18,7 @@
   --color-overlay-light: rgba(0, 0, 0, 0.4);
   --color-overlay-medium: rgba(0, 0, 0, 0.6);
   --color-overlay-heavy: rgba(0, 0, 0, 0.9);
+  --color-overlay-gray-light: #404040;
   --color-overlay-gray-heavy: #1f1f1f;
 
   /* Text */

@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router';
 import { useState } from 'react';
 
 export default function ApexInsightHomepage() {
@@ -73,34 +74,29 @@ export default function ApexInsightHomepage() {
         {/* Header */}
         <header className="bg-overlay-gray-heavy backdrop-blur-sm border-b border-white/10 sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-6 py-4">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center">
               {/* Brand */}
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-linear-to-br from-primary-red to-primary-darkest rounded-lg flex items-center justify-center">
-                  <span className="text-2xl font-bold">A</span>
-                </div>
-                <h1 className="text-3xl font-bold tracking-tight">ApexInsight</h1>
+              <div className="mr-auto md:mr-8 flex items-center">
+                <h1 className="text-xl font-bold tracking-tight">ApexIntel</h1>
               </div>
 
               {/* Navigation */}
-              <nav className="hidden md:flex items-center gap-8">
+              <nav className="mr-auto hidden md:flex items-center gap-8">
                 {navItems.map((item) => (
-                  <button
+                  <NavLink
                     key={item}
                     onClick={() => setActiveNav(item.toLowerCase())}
                     className={`text-sm font-semibold tracking-wide transition-colors ${activeNav === item.toLowerCase()
-                        ? 'text-orange'
-                        : 'text-white/80 hover:text-white'
+                      ? 'text-orange'
+                      : 'text-white/80 hover:text-white'
                       }`}
                   >
                     {item}
-                  </button>
+                  </NavLink>
                 ))}
               </nav>
 
-              <button className="hidden md:block bg-orange hover:bg-orange px-6 py-2 rounded-md text-sm font-bold transition-colors">
-                SUBSCRIBE
-              </button>
+              <input type="text" placeholder='Search' className='py-1 px-2 hidden md:flex items-center rounded-lg bg-overlay-gray-light' />
 
               {/* Mobile Menu Button */}
               <button className="md:hidden text-white">
@@ -112,88 +108,90 @@ export default function ApexInsightHomepage() {
           </div>
         </header>
 
-        {/* Hero Section - Featured Article */}
-        <section className="max-w-7xl mx-auto px-6 py-12">
-          <div className="relative rounded-xl overflow-hidden group cursor-pointer">
-            <div className="absolute inset-0 bg-linear-to-t from-black via-black/50 to-transparent z-10"></div>
-            <img
-              src={featuredArticle.image}
-              alt={featuredArticle.title}
-              className="w-full h-125 object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-            <div className="absolute bottom-0 left-0 right-0 p-8 z-20">
-              <span className="inline-block bg-primary-red px-3 py-1 text-xs font-bold mb-3">
-                {featuredArticle.category}
-              </span>
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-                {featuredArticle.title}
-              </h2>
-              <p className="text-lg text-white/90 mb-4 max-w-3xl">
-                {featuredArticle.excerpt}
-              </p>
-              <div className="flex items-center gap-4 text-sm text-white/70">
-                <span>{featuredArticle.time}</span>
-                <span>•</span>
-                <span>5 min read</span>
+        <main>
+          {/* Hero Section - Featured Article */}
+          <section className="max-w-7xl mx-auto px-6 py-12">
+            <div className="relative rounded-xl overflow-hidden group cursor-pointer">
+              <div className="absolute inset-0 bg-linear-to-t from-black via-black/50 to-transparent z-10"></div>
+              <img
+                src={featuredArticle.image}
+                alt={featuredArticle.title}
+                className="w-full h-125 object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-8 z-20">
+                <span className="inline-block bg-primary-red px-3 py-1 text-xs font-bold mb-3">
+                  {featuredArticle.category}
+                </span>
+                <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+                  {featuredArticle.title}
+                </h2>
+                <p className="text-lg text-white/90 mb-4 max-w-3xl">
+                  {featuredArticle.excerpt}
+                </p>
+                <div className="flex items-center gap-4 text-sm text-white/70">
+                  <span>{featuredArticle.time}</span>
+                  <span>•</span>
+                  <span>5 min read</span>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Latest News Section */}
-        <section className="max-w-7xl mx-auto px-6 py-12">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold">Latest News</h2>
-            <a href="#" className="text-orange hover:text-orange-light font-semibold text-sm flex items-center gap-2">
-              View All
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
+          {/* Latest News Section */}
+          <section className="max-w-7xl mx-auto px-6 py-12">
+            <div className="flex items-center justify-between mb-8">
+              <h2 className="text-3xl font-bold">Latest News</h2>
+              <a href="#" className="text-orange hover:text-orange-light font-semibold text-sm flex items-center gap-2">
+                View All
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {newsArticles.map((article) => (
-              <div key={article.id} className="bg-black/40 rounded-lg overflow-hidden hover:bg-black/60 transition-colors group cursor-pointer border border-white/10">
-                <div className="relative overflow-hidden">
-                  <img
-                    src={article.image}
-                    alt={article.title}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <span className="absolute top-3 left-3 bg-primary-darkest px-3 py-1 text-xs font-bold">
-                    {article.category}
-                  </span>
-                </div>
-                <div className="p-5">
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-orange transition-colors">
-                    {article.title}
-                  </h3>
-                  <p className="text-white/70 text-sm mb-4 line-clamp-2">
-                    {article.excerpt}
-                  </p>
-                  <div className="flex items-center gap-3 text-xs text-white/50">
-                    <span>{article.time}</span>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {newsArticles.map((article) => (
+                <div key={article.id} className="bg-black/40 rounded-lg overflow-hidden hover:bg-black/60 transition-colors group cursor-pointer border border-white/10">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={article.image}
+                      alt={article.title}
+                      className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <span className="absolute top-3 left-3 bg-primary-darkest px-3 py-1 text-xs font-bold">
+                      {article.category}
+                    </span>
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-xl font-bold mb-2 group-hover:text-orange transition-colors">
+                      {article.title}
+                    </h3>
+                    <p className="text-white/70 text-sm mb-4 line-clamp-2">
+                      {article.excerpt}
+                    </p>
+                    <div className="flex items-center gap-3 text-xs text-white/50">
+                      <span>{article.time}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </section>
+              ))}
+            </div>
+          </section>
 
-        {/* Categories Section */}
-        <section className="max-w-7xl mx-auto px-6 py-12">
-          <h2 className="text-3xl font-bold mb-8">Browse by Category</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {['Patch Notes', 'Tournaments', 'Legend Guides', 'Weapon Stats', 'Meta Analysis', 'Pro Tips', 'Community Highlights', 'Developer Updates'].map((category) => (
-              <div key={category} className="bg-black/40 hover:bg-orange border border-white/10 rounded-lg p-6 text-center cursor-pointer transition-all group">
-                <h3 className="font-bold text-lg group-hover:scale-110 transition-transform">
-                  {category}
-                </h3>
-              </div>
-            ))}
-          </div>
-        </section>
+          {/* Categories Section */}
+          <section className="max-w-7xl mx-auto px-6 py-12">
+            <h2 className="text-3xl font-bold mb-8">Browse by Category</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {['Patch Notes', 'Tournaments', 'Legend Guides', 'Weapon Stats', 'Meta Analysis', 'Pro Tips', 'Community Highlights', 'Developer Updates'].map((category) => (
+                <div key={category} className="bg-black/40 hover:bg-orange border border-white/10 rounded-lg p-6 text-center cursor-pointer transition-all group">
+                  <h3 className="font-bold text-lg group-hover:scale-110 transition-transform">
+                    {category}
+                  </h3>
+                </div>
+              ))}
+            </div>
+          </section>
+        </main>
 
         {/* Footer */}
         <footer className="bg-black/60 border-t border-white/10 mt-16">
