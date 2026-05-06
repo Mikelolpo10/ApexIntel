@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+/* THEME */
+@theme {
+  /* Primary palette */
+  --color-primary-dark: #7D5A5A;
+  --color-primary-red: #FF0000;
+  --color-primary-light: #E8E4E0;
+  --color-primary-muted: #9B8181;
+  --color-primary-darkest: #5B1717;
+
+  /* Tertiary orange */
+  --color-orange: #FF6B00;
+  --color-orange-light: #FF8533;
+  --color-orange-dark: #CC5500;
+
+  /* Semi-transparent blacks */
+  --color-overlay-light: rgba(0, 0, 0, 0.4);
+  --color-overlay-medium: rgba(0, 0, 0, 0.6);
+  --color-overlay-heavy: rgba(0, 0, 0, 0.9);
+  --color-overlay-gray-heavy: #1f1f1f;
+
+  /* Text */
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: rgba(255,255,255,0.9);
+  --color-text-muted: rgba(255,255,255,0.7);
+  --color-text-disabled: rgba(255,255,255,0.5);
+}
