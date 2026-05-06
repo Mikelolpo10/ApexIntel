@@ -1,6 +1,7 @@
 import { Link } from 'react-router';
 import Header from '../components/Header';
 import NewsCard from '../components/NewsCard';
+import Footer from '../components/Footer';
 import { useState } from 'react';
 
 export default function ApexInsightHomepage() {
@@ -136,50 +137,7 @@ export default function ApexInsightHomepage() {
         </main>
 
         {/* Footer */}
-        <footer className="bg-black/60 border-t border-white/10 mt-16">
-          <div className="max-w-7xl mx-auto px-6 py-12">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-              <div>
-                <h3 className="font-bold text-xl mb-4">ApexIntel</h3>
-              </div>
-              <div>
-                <h4 className="font-bold mb-4 text-orange">Content</h4>
-                <ul className="space-y-2 text-sm text-white/70">
-                  <li><a href="#" className="hover:text-white transition-colors">Latest News</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Legend Guides</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Weapon Stats</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Tournament Coverage</a></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-bold mb-4 text-orange">Community</h4>
-                <ul className="space-y-2 text-sm text-white/70">
-                  <li><a href="#" className="hover:text-white transition-colors">Discord</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Forums</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Submit News</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Contributors</a></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-bold mb-4 text-orange">Follow Us</h4>
-                <div className="flex gap-4">
-                  <a href="#" className="w-10 h-10 bg-white/10 hover:bg-orange rounded-lg flex items-center justify-center transition-colors">
-                    <span className="text-xl">𝕏</span>
-                  </a>
-                  <a href="#" className="w-10 h-10 bg-white/10 hover:bg-orange rounded-lg flex items-center justify-center transition-colors">
-                    <span className="text-xl">▶</span>
-                  </a>
-                  <a href="#" className="w-10 h-10 bg-white/10 hover:bg-orange rounded-lg flex items-center justify-center transition-colors">
-                    <span className="text-xl">📘</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="border-t border-white/10 pt-8 text-center text-sm text-white/50">
-              <p>&copy; 2026 ApexInsight. All rights reserved. Not affiliated with EA or Respawn Entertainment.</p>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </>
   );
