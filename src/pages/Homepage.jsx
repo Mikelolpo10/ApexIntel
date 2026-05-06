@@ -1,15 +1,15 @@
-import { NavLink, Link } from 'react-router';
+import { Link } from 'react-router';
+import Header from '../components/Header';
+import NewsCard from '../components/NewsCard';
 import { useState } from 'react';
 
 export default function ApexInsightHomepage() {
-  const [activeNav, setActiveNav] = useState('home');
-
   const newsArticles = [
     {
       id: 1,
       category: 'PATCH NOTES',
       title: 'Season 20 brings massive Legend balancing changes',
-      excerpt: 'Respawn Entertainment has released comprehensive patch notes addressing community feedback on Legend abilities and weapon meta.',
+      quote: 'Respawn Entertainment has released comprehensive patch notes addressing community feedback on Legend abilities and weapon meta.',
       image: 'https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=800&h=500&fit=crop',
       time: '2 hours ago'
     },
@@ -17,7 +17,7 @@ export default function ApexInsightHomepage() {
       id: 2,
       category: 'TOURNAMENTS',
       title: 'ALGS Championship reaches record viewership',
-      excerpt: 'The Apex Legends Global Series Championship finals broke all previous records with over 500,000 concurrent viewers.',
+      quote: 'The Apex Legends Global Series Championship finals broke all previous records with over 500,000 concurrent viewers.',
       image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&h=500&fit=crop',
       time: '5 hours ago'
     },
@@ -25,7 +25,7 @@ export default function ApexInsightHomepage() {
       id: 3,
       category: 'LEGENDS',
       title: 'New Legend "Catalyst" abilities revealed',
-      excerpt: 'Data miners have uncovered potential abilities for the upcoming defensive Legend set to release next season.',
+      quote: 'Data miners have uncovered potential abilities for the upcoming defensive Legend set to release next season.',
       image: 'https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=800&h=500&fit=crop',
       time: '8 hours ago'
     },
@@ -33,7 +33,7 @@ export default function ApexInsightHomepage() {
       id: 4,
       category: 'WEAPONS',
       title: 'Wingman receives slight damage nerf in latest update',
-      excerpt: 'The beloved hand cannon has been adjusted to better balance the weapon meta in high-level competitive play.',
+      quote: 'The beloved hand cannon has been adjusted to better balance the weapon meta in high-level competitive play.',
       image: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&h=500&fit=crop',
       time: '12 hours ago'
     },
@@ -41,7 +41,7 @@ export default function ApexInsightHomepage() {
       id: 5,
       category: 'COMMUNITY',
       title: 'Player hits Predator rank using only melee attacks',
-      excerpt: 'An incredible feat of skill and patience as one player reaches the highest rank without firing a single bullet.',
+      quote: 'An incredible feat of skill and patience as one player reaches the highest rank without firing a single bullet.',
       image: 'https://images.unsplash.com/photo-1560253023-3ec5d502959f?w=800&h=500&fit=crop',
       time: '1 day ago'
     },
@@ -49,7 +49,7 @@ export default function ApexInsightHomepage() {
       id: 6,
       category: 'ESPORTS',
       title: 'Team Liquid dominates regional qualifiers',
-      excerpt: 'North American powerhouse secures their spot in the international championship with a flawless performance.',
+      quote: 'North American powerhouse secures their spot in the international championship with a flawless performance.',
       image: 'https://images.unsplash.com/photo-1556056504-5c7696c4c28d?w=800&h=500&fit=crop',
       time: '1 day ago'
     }
@@ -58,12 +58,10 @@ export default function ApexInsightHomepage() {
   const featuredArticle = {
     category: 'BREAKING NEWS',
     title: 'Broken Moon map receives major update with new POI locations',
-    excerpt: 'Respawn has announced sweeping changes to the Broken Moon map, introducing three new points of interest and revamping existing areas based on player feedback and competitive balance.',
+    quote: 'Respawn has announced sweeping changes to the Broken Moon map, introducing three new points of interest and revamping existing areas based on player feedback and competitive balance.',
     image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&h=600&fit=crop',
     time: '30 minutes ago'
   };
-
-  const navItems = ['HOME', 'LEGENDS', 'WEAPONS', 'TOURNAMENTS', 'GUIDES', 'COMMUNITY'];
 
   return (
     <>
@@ -72,41 +70,7 @@ export default function ApexInsightHomepage() {
       <div className="min-h-screen text-white">
 
         {/* Header */}
-        <header className="bg-overlay-gray-heavy backdrop-blur-sm border-b border-white/10 sticky top-0 z-50">
-          <div className="max-w-7xl mx-auto px-6 py-3">
-            <div className="flex items-center">
-              {/* Brand */}
-              <div className="mr-auto md:mr-8 flex items-center">
-                <h1 className="text-xl font-bold tracking-tight">ApexIntel</h1>
-              </div>
-
-              {/* Navigation */}
-              <nav className="mr-auto hidden md:flex items-center gap-8">
-                {navItems.map((item) => (
-                  <NavLink
-                    key={item}
-                    onClick={() => setActiveNav(item.toLowerCase())}
-                    className={`text-sm font-semibold tracking-wide transition-colors ${activeNav === item.toLowerCase()
-                      ? 'text-orange'
-                      : 'text-white/80 hover:text-white'
-                      }`}
-                  >
-                    {item}
-                  </NavLink>
-                ))}
-              </nav>
-
-              <input type="text" placeholder='Search' className='py-1 px-2 hidden md:flex items-center rounded-md bg-overlay-gray-light text-sm' />
-
-              {/* Mobile Menu Button */}
-              <button className="md:hidden text-white">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </header>
+        <Header />
 
         <main className="before:content-[''] before:fixed before:bg-[url('/images/background-grayscale.jpg')] before:bg-cover before:bg-center before:inset-0 before:-z-20 min-h-screen after:content-[''] after:fixed after:inset-0 after:bg-black/90 after:-z-10" >
           {/* Hero Section - Featured Article */}
@@ -128,7 +92,7 @@ export default function ApexInsightHomepage() {
                   {featuredArticle.title}
                 </h2>
                 <p className="text-md text-white/90 mb-4 max-w-3xl">
-                  {featuredArticle.excerpt}
+                  {featuredArticle.quote}
                 </p>
                 <div className="flex items-center gap-4 text-sm text-white/70">
                   <span>{featuredArticle.time}</span>
@@ -141,39 +105,17 @@ export default function ApexInsightHomepage() {
           <section className="max-w-7xl mx-auto px-6 py-12">
             <div className="flex items-center justify-between mb-8">
               <h2 className="text-3xl font-bold">Latest News</h2>
-              <a href="#" className="text-orange hover:text-orange-light font-semibold text-sm flex items-center gap-2">
+              <Link to='/news' className="text-orange hover:text-orange-light font-semibold text-sm flex items-center gap-2">
                 View All
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </a>
+              </Link>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {newsArticles.map((article) => (
-                <div key={article.id} className="bg-black/40 rounded-lg overflow-hidden hover:bg-black/60 transition-colors group cursor-pointer border border-white/10">
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={article.image}
-                      alt={article.title}
-                      className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <span className="absolute top-3 left-3 bg-primary-darkest px-3 py-1 text-xs font-bold">
-                      {article.category}
-                    </span>
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold mb-2 group-hover:text-orange transition-colors">
-                      {article.title}
-                    </h3>
-                    <p className="text-white/70 text-sm mb-4 line-clamp-2">
-                      {article.excerpt}
-                    </p>
-                    <div className="flex items-center gap-3 text-xs text-white/50">
-                      <span>{article.time}</span>
-                    </div>
-                  </div>
-                </div>
+              {newsArticles.map((news) => (
+                <NewsCard news={news} />
               ))}
             </div>
           </section>
@@ -198,10 +140,7 @@ export default function ApexInsightHomepage() {
           <div className="max-w-7xl mx-auto px-6 py-12">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
               <div>
-                <h3 className="font-bold text-xl mb-4">ApexInsight</h3>
-                <p className="text-white/60 text-sm">
-                  Your ultimate source for Apex Legends news, guides, and competitive updates.
-                </p>
+                <h3 className="font-bold text-xl mb-4">ApexIntel</h3>
               </div>
               <div>
                 <h4 className="font-bold mb-4 text-orange">Content</h4>
