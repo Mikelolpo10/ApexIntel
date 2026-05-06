@@ -67,9 +67,9 @@ export default function ApexInsightHomepage() {
 
   return (
     <>
-      <title>Apex Intel</title>
+      <title>ApexIntel</title>
 
-      <div className="min-h-screen bg-primary-muted text-white">
+      <div className="min-h-screen text-white">
 
         {/* Header */}
         <header className="bg-overlay-gray-heavy backdrop-blur-sm border-b border-white/10 sticky top-0 z-50">
@@ -108,7 +108,7 @@ export default function ApexInsightHomepage() {
           </div>
         </header>
 
-        <main>
+        <main className="before:content-[''] before:fixed before:bg-[url('/images/background-grayscale.jpg')] before:bg-cover before:bg-center before:inset-0 before:-z-20 min-h-screen after:content-[''] after:fixed after:inset-0 after:bg-black/90 after:-z-10" >
           {/* Hero Section - Featured Article */}
           <section className="max-w-7xl mx-auto px-6 py-12">
             <div className="relative rounded-xl overflow-hidden group cursor-pointer">
