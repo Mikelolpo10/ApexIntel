@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router';
+import { NavLink, Link } from 'react-router';
 import { useState } from 'react';
 
 export default function ApexInsightHomepage() {
@@ -111,30 +111,30 @@ export default function ApexInsightHomepage() {
         <main className="before:content-[''] before:fixed before:bg-[url('/images/background-grayscale.jpg')] before:bg-cover before:bg-center before:inset-0 before:-z-20 min-h-screen after:content-[''] after:fixed after:inset-0 after:bg-black/90 after:-z-10" >
           {/* Hero Section - Featured Article */}
           <section className="max-w-7xl mx-auto px-6 py-12">
-            <div className="relative rounded-xl overflow-hidden group cursor-pointer">
+            <Link to='/news/' className="group relative overflow-hidden cursor-pointer">
               <div className="absolute inset-0 bg-linear-to-t from-black via-black/50 to-transparent z-10"></div>
-              <img
-                src={featuredArticle.image}
-                alt={featuredArticle.title}
-                className="w-full h-125 object-cover group-hover:scale-105 transition-transform duration-500"
-              />
+              <div className='rounded-xl overflow-hidden'>
+                <img
+                  src={featuredArticle.image}
+                  alt={featuredArticle.title}
+                  className="w-full h-125 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
               <div className="absolute bottom-0 left-0 right-0 p-8 z-20">
                 <span className="inline-block bg-primary-red px-3 py-1 text-xs font-bold mb-3">
                   {featuredArticle.category}
                 </span>
-                <h2 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+                <h2 className="group-hover:underline max-w-xl text-4xl md:text-3xl font-bold mb-4 underline-offset-4 decoration-[1.5px] leading-tight duration-75">
                   {featuredArticle.title}
                 </h2>
-                <p className="text-lg text-white/90 mb-4 max-w-3xl">
+                <p className="text-md text-white/90 mb-4 max-w-3xl">
                   {featuredArticle.excerpt}
                 </p>
                 <div className="flex items-center gap-4 text-sm text-white/70">
                   <span>{featuredArticle.time}</span>
-                  <span>•</span>
-                  <span>5 min read</span>
                 </div>
               </div>
-            </div>
+            </Link>
           </section>
 
           {/* Latest News Section */}
