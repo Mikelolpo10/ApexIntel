@@ -32,14 +32,14 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-2 text-orange">Follow Us</h4>
             <div className="flex gap-4">
-              <a href="" className="w-10 h-10 bg-white/10 hover:bg-orange rounded-lg flex items-center justify-center transition-colors">
-                <span className="text-xl">𝕏</span>
+              <a href="" className="w-8 h-8 bg-white/10 hover:bg-orange rounded-lg flex items-center justify-center transition-colors">
+                <img src="/images/x.jpg" alt="" />
               </a>
-              <a href="" className="w-10 h-10 bg-white/10 hover:bg-orange rounded-lg flex items-center justify-center transition-colors">
-                <span className="text-xl">▶</span>
+              <a href="" className="w-8 h-8 bg-white/10 hover:bg-orange rounded-lg flex items-center justify-center transition-colors">
+                <img src="/images/instagram.png" alt="" />
               </a>
-              <a href="" className="w-10 h-10 bg-white/10 hover:bg-orange rounded-lg flex items-center justify-center transition-colors">
-                <span className="text-xl">📘</span>
+              <a href="https://www.tiktok.com/@mikelolpo10" target="_blank" className="w-8 h-8 bg-white/10 hover:bg-orange rounded-lg flex items-center justify-center transition-colors">
+                <img src="/images/tiktok.png" alt="" />
               </a>
             </div>
           </div>
