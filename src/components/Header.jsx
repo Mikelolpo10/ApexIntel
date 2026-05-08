@@ -5,7 +5,7 @@ export default function Header() {
 
   return (
     <header className="bg-overlay-gray-heavy backdrop-blur-sm border-b border-white/10 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-6 py-3">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center">
           {/* Brand */}
           <div className="mr-auto md:mr-8 flex items-center">
@@ -13,13 +13,13 @@ export default function Header() {
           </div>
 
           {/* Navigation */}
-          <nav className="mr-auto hidden md:flex items-center gap-8">
+          <nav className="mr-auto h-15 hidden md:flex items-center gap-8 box-content">
             {navItems.map((item) => (
               <NavLink
                 key={item}
                 to={`/${item == 'HOME' ? '' : item}`}
-                className={({isActive}) => (
-                  `${isActive ? 'text-orange' : ''} text-sm font-semibold tracking-wide transition-colors`
+                className={({ isActive }) => (
+                  `${isActive ? 'text-orange' : ''} relative flex items-center h-full text-sm font-semibold tracking-wide transition-colors before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-text-secondary hover:before:w-full`
                 )}
               >
                 {item}
@@ -27,7 +27,7 @@ export default function Header() {
             ))}
           </nav>
 
-          <input type="text" placeholder='Search' className='py-1 px-2 hidden md:flex items-center rounded-md bg-overlay-gray-light text-sm' />
+          <input type="text" placeholder='Search' className='py-2 px-3 hidden md:flex items-center rounded-md bg-overlay-gray-light text-sm focus:outline-none' />
 
           {/* Mobile Menu Button */}
           <button className="md:hidden text-white">
