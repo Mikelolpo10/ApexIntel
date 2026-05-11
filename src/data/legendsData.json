@@ -3,168 +3,196 @@
     "name": "Alter",
     "nickname": "Void Breacher",
     "path": "/legends/alter",
-    "img": "/images/legends/alter.jpg"
+    "img": "/images/legends/alter.jpg",
+    "class": "Skirmisher"
   },
   {
     "name": "Ash",
     "nickname": "Incisive Instigator",
     "path": "/legends/ash",
-    "img": "/images/legends/ash.jpg"
+    "img": "/images/legends/ash.jpg",
+    "class": "Skirmisher"
   },
   {
     "name": "Axle",
-    "nickname": "Unknown",
+    "nickname": "Combat Racer",
     "path": "/legends/axle",
-    "img": "/images/legends/axle.jpg"
+    "img": "/images/legends/axle.jpg",
+    "class": "Skirmisher"
   },
   {
     "name": "Ballistic",
     "nickname": "Refined Gunslinger",
     "path": "/legends/ballistic",
-    "img": "/images/legends/ballistic.jpg"
+    "img": "/images/legends/ballistic.jpg",
+    "class": "Assault"
   },
   {
     "name": "Bangalore",
     "nickname": "Professional Soldier",
     "path": "/legends/bangalore",
-    "img": "/images/legends/bangalore.jpg"
+    "img": "/images/legends/bangalore.jpg",
+    "class": "Assault"
   },
   {
     "name": "Bloodhound",
     "nickname": "Technological Tracker",
     "path": "/legends/bloodhound",
-    "img": "/images/legends/bloodhound.jpg"
+    "img": "/images/legends/bloodhound.jpg",
+    "class": "Recon"
   },
   {
     "name": "Catalyst",
     "nickname": "Defensive Conjurer",
     "path": "/legends/catalyst",
-    "img": "/images/legends/catalyst.jpg"
+    "img": "/images/legends/catalyst.jpg",
+    "class": "Controller"
   },
   {
     "name": "Caustic",
     "nickname": "Toxic Trapper",
     "path": "/legends/caustic",
-    "img": "/images/legends/caustic.jpg"
+    "img": "/images/legends/caustic.jpg",
+    "class": "Controller"
   },
   {
     "name": "Conduit",
     "nickname": "Shield Healer",
     "path": "/legends/conduit",
-    "img": "/images/legends/conduit.jpg"
+    "img": "/images/legends/conduit.jpg",
+    "class": "Support"
   },
   {
     "name": "Crypto",
     "nickname": "Surveillance Expert",
     "path": "/legends/crypto",
-    "img": "/images/legends/crypto.jpg"
+    "img": "/images/legends/crypto.jpg",
+    "class": "Recon"
   },
   {
     "name": "Fuse",
     "nickname": "Explosives Enthusiast",
     "path": "/legends/fuse",
-    "img": "/images/legends/fuse.jpg"
+    "img": "/images/legends/fuse.jpg",
+    "class": "Assault"
   },
   {
     "name": "Gibraltar",
     "nickname": "Shielded Fortress",
     "path": "/legends/gibraltar",
-    "img": "/images/legends/gibraltar.jpg"
+    "img": "/images/legends/gibraltar.jpg",
+    "class": "Support"
   },
   {
     "name": "Horizon",
     "nickname": "Gravitational Manipulator",
     "path": "/legends/horizon",
-    "img": "/images/legends/horizon.jpg"
+    "img": "/images/legends/horizon.jpg",
+    "class": "Skirmisher"
   },
   {
     "name": "Lifeline",
     "nickname": "Combat Medic",
     "path": "/legends/lifeline",
-    "img": "/images/legends/lifeline.jpg"
+    "img": "/images/legends/lifeline.jpg",
+    "class": "Support"
   },
   {
     "name": "Loba",
     "nickname": "Translocating Thief",
     "path": "/legends/loba",
-    "img": "/images/legends/loba.jpg"
+    "img": "/images/legends/loba.jpg",
+    "class": "Support"
   },
   {
     "name": "Mad Maggie",
     "nickname": "Rebel Warlord",
     "path": "/legends/mad-maggie",
-    "img": "/images/legends/mad-maggie.jpg"
+    "img": "/images/legends/mad-maggie.jpg",
+    "class": "Assault"
   },
   {
     "name": "Mirage",
     "nickname": "Holographic Trickster",
     "path": "/legends/mirage",
-    "img": "/images/legends/mirage.jpg"
+    "img": "/images/legends/mirage.jpg",
+    "class": "Support"
   },
   {
     "name": "Newcastle",
     "nickname": "Mobile Guardian",
     "path": "/legends/newcastle",
-    "img": "/images/legends/newcastle.jpg"
+    "img": "/images/legends/newcastle.jpg",
+    "class": "Support"
   },
   {
     "name": "Octane",
     "nickname": "High-Speed Daredevil",
     "path": "/legends/octane",
-    "img": "/images/legends/octane.jpg"
+    "img": "/images/legends/octane.jpg",
+    "class": "Skirmisher"
   },
   {
     "name": "Pathfinder",
     "nickname": "Forward Scout",
     "path": "/legends/pathfinder",
-    "img": "/images/legends/pathfinder.jpg"
+    "img": "/images/legends/pathfinder.jpg",
+    "class": "Skirmisher"
   },
   {
     "name": "Rampart",
     "nickname": "Base of Fire",
     "path": "/legends/rampart",
-    "img": "/images/legends/rampart.jpg"
+    "img": "/images/legends/rampart.jpg",
+    "class": "Controller"
   },
   {
     "name": "Revenant",
     "nickname": "Synthetic Nightmare",
     "path": "/legends/revenant",
-    "img": "/images/legends/revenant.jpg"
+    "img": "/images/legends/revenant.jpg",
+    "class": "Assault"
   },
   {
     "name": "Seer",
     "nickname": "Ambush Artist",
     "path": "/legends/seer",
-    "img": "/images/legends/seer.jpg"
+    "img": "/images/legends/seer.jpg",
+    "class": "Recon"
   },
   {
     "name": "Sparrow",
-    "nickname": "Unknown",
+    "nickname": "Agile Archer",
     "path": "/legends/sparrow",
-    "img": "/images/legends/sparrow.jpg"
+    "img": "/images/legends/sparrow.jpg",
+    "class": "Recon"
   },
   {
     "name": "Valkyrie",
     "nickname": "Winged Avenger",
     "path": "/legends/valkyrie",
-    "img": "/images/legends/valkyrie.jpg"
+    "img": "/images/legends/valkyrie.jpg",
+    "class": "Recon"
   },
   {
     "name": "Vantage",
     "nickname": "Survivalist Sniper",
     "path": "/legends/vantage",
-    "img": "/images/legends/vantage.jpg"
+    "img": "/images/legends/vantage.jpg",
+    "class": "Recon"
   },
   {
     "name": "Wattson",
     "nickname": "Static Defender",
     "path": "/legends/wattson",
-    "img": "/images/legends/wattson.jpg"
+    "img": "/images/legends/wattson.jpg",
+    "class": "Controller"
   },
   {
     "name": "Wraith",
     "nickname": "Interdimensional Skirmisher",
     "path": "/legends/wraith",
-    "img": "/images/legends/wraith.jpg"
+    "img": "/images/legends/wraith.jpg",
+    "class": "Skirmisher"
   }
 ]
