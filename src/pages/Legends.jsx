@@ -1,49 +1,12 @@
 import { useState } from "react"
 import Header from "../components/Header"
+import MainCard from "../components/MainCard"
 import legendsClassIcon from '../assets/icon/legends-class.png'
+import legendsData from '../data/legendsData.json'
+import legendsClass from '../data/legendsClass.json'
 
 export default function Legends() {
   const [classSelected, setClassSelected] = useState('all')
-  const legendsClass = {
-    'Assault': [
-      'Ballistic',
-      'Bangalore',
-      'Fuse',
-      'Mad Maggie',
-      'Revenant'
-    ],
-    'Skrimisher': [
-      'Alter',
-      'Ash',
-      'Axle',
-      'Horizon',
-      'Octane',
-      'Pathfinder',
-      'Wraith'
-    ],
-    'Recon': [
-      'Bloodhound',
-      'Crypto',
-      'Seer',
-      'Sparrow',
-      'Valkyrie',
-      'Vantage'
-    ],
-    'Support': [
-      'Conduit',
-      'Gibraltar',
-      'Lifeline',
-      'Loba',
-      'Mirage',
-      'New Castle'
-    ],
-    'Controller': [
-      'Catalyst',
-      'Caustic',
-      'Rampart',
-      'Wattson'
-    ]
-  }
 
   return (
     <>
@@ -80,7 +43,11 @@ export default function Legends() {
             ))}
           </nav>
 
-          <div className="main-card-container"></div>
+          <div className="main-card-container">
+            {legendsData.map(({name, nickname, path, img}) => (
+              <MainCard name={name} nickname={nickname} path={path} img={img} />
+            ))}
+          </div>
         </section>
       </main>
     </>
