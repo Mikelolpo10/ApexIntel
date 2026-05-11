@@ -4,7 +4,7 @@ export default function Header() {
   const navItems = ['HOME', 'LEGENDS', 'WEAPONS', 'TOURNAMENTS', 'GUIDES', 'COMMUNITY'];
 
   return (
-    <header className="bg-overlay-gray-heavy backdrop-blur-sm border-b border-white/10 sticky top-0 z-50">
+    <header className="bg-overlay-gray-heavy backdrop-blur-sm border-b border-white/10 sticky top-0 text-white z-50">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center">
           {/* Brand */}
@@ -17,7 +17,7 @@ export default function Header() {
             {navItems.map((item) => (
               <NavLink
                 key={item}
-                to={`/${item == 'HOME' ? '' : item}`}
+                to={`/${item == 'HOME' ? '' : item.toLocaleLowerCase()}`}
                 className={({ isActive }) => (
                   `${isActive ? 'text-orange' : ''} relative flex items-center h-full text-sm font-semibold tracking-wide transition-colors before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-text-secondary hover:before:w-full`
                 )}
