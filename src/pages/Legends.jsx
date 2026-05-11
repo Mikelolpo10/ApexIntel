@@ -1,12 +1,13 @@
 import { useState } from "react"
-import Header from "../components/Header"
+import Header from "../components/Header.jsx"
+import Footer from '../components/Footer.jsx'
 import MainCard from "../components/MainCard"
 import legendsClassIcon from '../assets/icon/legends-class.png'
-import legendsData from '../data/legendsData.json'
 import legendsClass from '../data/legendsClass.json'
+import legendsData from '../data/legendsData.json'
 
 export default function Legends() {
-  const [classSelected, setClassSelected] = useState('all')
+  const [selectedClass, setselectedClass] = useState('ALL')
 
   return (
     <>
@@ -30,13 +31,13 @@ export default function Legends() {
               <div
                 key={className}
                 className={`
-                  relative py-4 px-2 flex items-center justify-center cursor-pointer hover:text-white
-                  ${classSelected === className.toLocaleLowerCase()
+                  relative py-4 px-2 flex items-center justify-center cursor-pointer 
+                  ${selectedClass === className
                     ? "text-orange before:content-[''] before:absolute before:left-0 before:bottom-0 before:w-full before:h-0.5 before:bg-orange"
-                    : ''
+                    : 'hover:text-white'
                   }
                 `}
-                onClick={() => setClassSelected(className.toLocaleLowerCase())}
+                onClick={() => setselectedClass(className)}
               >
                 {className === 'ALL' ? className : `${className} Class Legends`}
               </div>
@@ -44,12 +45,28 @@ export default function Legends() {
           </nav>
 
           <div className="main-card-container">
-            {legendsData.map(({name, nickname, path, img}) => (
-              <MainCard name={name} nickname={nickname} path={path} img={img} />
-            ))}
+            {
+              legendsData
+                .filter(
+                  (legend) =>
+                    selectedClass === 'ALL' ||
+                    legend.class === selectedClass
+                )
+                .map(({ name, nickname, path, img }) => (
+                  <MainCard
+                    key={name}
+                    name={name}
+                    nickname={nickname}
+                    path={path}
+                    img={img}
+                  />
+                ))
+            }
           </div>
         </section>
       </main>
+
+      <Footer />
     </>
   )
 }
