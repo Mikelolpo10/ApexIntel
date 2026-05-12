@@ -73,7 +73,7 @@ export default function ApexInsightHomepage() {
         {/* Header */}
         <Header />
 
-        <main className="before:content-[''] before:fixed before:bg-[url('/images/background-grayscale.jpg')] before:bg-cover before:bg-center before:inset-0 before:-z-20 min-h-screen after:content-[''] after:fixed after:inset-0 after:bg-black/90 after:-z-10" >
+        <main className="main">
           {/* Hero Section - Featured Article */}
           <section className="max-w-7xl mx-auto px-6 py-12">
             <Link to='/news/' className="group relative overflow-hidden cursor-pointer">
