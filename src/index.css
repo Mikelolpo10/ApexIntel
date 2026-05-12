@@ -23,14 +23,25 @@
 
   /* Text */
   --color-text-primary: #FFFFFF;
-  --color-text-secondary: rgba(255,255,255,0.9);
-  --color-text-muted: rgba(255,255,255,0.7);
-  --color-text-disabled: rgba(255,255,255,0.5);
+  --color-text-secondary: rgba(255, 255, 255, 0.9);
+  --color-text-muted: rgba(255, 255, 255, 0.7);
+  --color-text-disabled: rgba(255, 255, 255, 0.5);
 }
 
 /* CSS STYLE */
 .main {
-  @apply mx-auto px-6 max-w-7xl min-h-screen text-white before:content-[''] before:fixed before:bg-[url('/images/background-grayscale.jpg')] before:bg-cover before:bg-center before:inset-0 before:-z-20 after:content-[''] after:fixed after:inset-0 after:bg-black/90 after:-z-10
+  @apply mx-auto px-6 max-w-7xl text-white;
+}
+
+.main::before {
+  content: '';
+  @apply fixed inset-0 -z-20 bg-cover bg-center;
+  background-image: url('/images/background-grayscale.jpg');
+}
+
+.main::after {
+  content: '';
+  @apply fixed inset-0 -z-10 bg-black/90;
 }
 
 .main-card-container {
