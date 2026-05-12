@@ -50,7 +50,7 @@ export default function LegendsMenu() {
 
       <Header />
 
-      <main className="mx-auto px-6 max-w-7xl min-h-screen text-white before:content-[''] before:fixed before:bg-[url('/images/background-grayscale.jpg')] before:bg-cover before:bg-center before:inset-0 before:-z-20 after:content-[''] after:fixed after:inset-0 after:bg-black/90 after:-z-10">
+      <main className="main">
         {/* Legends Selection */}
         <section className="my-8">
           <div className="w-full flex">

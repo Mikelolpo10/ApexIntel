@@ -29,6 +29,10 @@
 }
 
 /* CSS STYLE */
+.main {
+  @apply mx-auto px-6 max-w-7xl min-h-screen text-white before:content-[''] before:fixed before:bg-[url('/images/background-grayscale.jpg')] before:bg-cover before:bg-center before:inset-0 before:-z-20 after:content-[''] after:fixed after:inset-0 after:bg-black/90 after:-z-10
+}
+
 .main-card-container {
   margin-top: 2rem;
   display: grid;
