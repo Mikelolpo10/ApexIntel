@@ -3,9 +3,9 @@ import { Link } from "react-router"
 export default function Footer() {
   return (
     <footer className="bg-black/60 border-t border-white/10 mt-16">
-      <div className="max-w-7xl mx-auto px-6 py-12">
-        <div className="mb-6">
-          <h3 className="font-bold text-xl mb-4">ApexIntel</h3>
+      <div className="max-w-7xl mx-auto px-6 py-6">
+        <div className="mb-4">
+          <h3 className="text-text-secondary font-bold text-xl mb-4">ApexIntel</h3>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
@@ -45,7 +45,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 text-center text-sm text-white/50">
+        <div className="border-t border-white/10 pt-4 text-center text-sm text-white/50">
           <p>&copy; 2026 ApexIntel. All rights reserved. Not affiliated with EA or Respawn Entertainment.</p>
         </div>
       </div>
