@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Header from "../components/Header.jsx"
 import Footer from '../components/Footer.jsx'
-import MainCard from "../components/MainCard"
+import MainCard from "../components/MainCard.jsx"
 import legendsClassIcon from '../assets/icon/legends-class.png'
 import assaultClassIcon from '../assets/icon/assault-class.png'
 import skirmisherClassIcon from '../assets/icon/skirmisher-class.png'
@@ -11,7 +11,7 @@ import controllerClassIcon from '../assets/icon/controller-class.png'
 import legendsClass from '../data/legendsClass.json'
 import legendsData from '../data/legendsData.json'
 
-export default function Legends() {
+export default function LegendsMenu() {
   const [selectedClass, setselectedClass] = useState('ALL')
   const classIcons = {
     ALL: legendsClassIcon,
