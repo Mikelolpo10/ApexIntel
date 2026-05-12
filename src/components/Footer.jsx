@@ -2,7 +2,7 @@ import { Link } from "react-router"
 
 export default function Footer() {
   return (
-    <footer className="bg-black/60 border-t border-white/10 mt-16">
+    <footer className="mt-auto bg-black/60 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6 py-6">
         <div className="mb-4">
           <h3 className="text-text-secondary font-bold text-xl mb-4">ApexIntel</h3>
