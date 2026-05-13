@@ -35,10 +35,10 @@ export default function Footer() {
               <a href="" className="w-8 h-8 bg-white/10 hover:bg-orange rounded-lg flex items-center justify-center transition-colors">
                 <img src="/images/x.jpg" alt="" />
               </a>
-              <a href="" className="w-8 h-8 bg-white/10 hover:bg-orange rounded-lg flex items-center justify-center transition-colors">
-                <img src="/images/instagram.png" alt="" />
+              <a href="https://www.instagram.com/mikelolpo10?igsh=NDNramo2NDVuZGJ0" target="_blank" className="w-8 h-8 bg-white/10 hover:bg-orange rounded-lg flex items-center justify-center transition-colors">
+                <img src="/images/instagram.webp" alt="" />
               </a>
-              <a href="https://www.tiktok.com/@mikelolpo10" target="_blank" className="w-8 h-8 bg-white/10 hover:bg-orange rounded-lg flex items-center justify-center transition-colors">
+              <a href="https://www.tiktok.com/@mikelolpo10" target="_blank" className="w-8 h-8 hover:bg-orange rounded-full flex items-center justify-center transition-colors">
                 <img src="/images/tiktok.png" alt="" />
               </a>
             </div>

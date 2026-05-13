@@ -21,7 +21,7 @@ export default function Legends() {
               <span><strong>Name: </strong>{legendInfo.name}</span>
               <span><strong>Nickname: </strong>{legendInfo.nickname}</span>
             </div>
-          </section>
+          </section> 
         </main>
 
         <Footer />
