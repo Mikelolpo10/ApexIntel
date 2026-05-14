@@ -2,6 +2,7 @@
   {
     "name": "Alter",
     "nickname": "Void Breacher",
+    "quote": "Reality is just another wall waiting to be broken.",
     "path": "/legends/alter",
     "img": "/images/legends/alter.jpg",
     "class": "Skirmisher"
@@ -9,6 +10,7 @@
   {
     "name": "Ash",
     "nickname": "Incisive Instigator",
+    "quote": "You made the mistake of facing me.",
     "path": "/legends/ash",
     "img": "/images/legends/ash.jpg",
     "class": "Skirmisher"
@@ -16,6 +18,7 @@
   {
     "name": "Axle",
     "nickname": "Combat Racer",
+    "quote": "Catch me if you can.",
     "path": "/legends/axle",
     "img": "/images/legends/axle.jpg",
     "class": "Skirmisher"
@@ -23,6 +26,7 @@
   {
     "name": "Ballistic",
     "nickname": "Refined Gunslinger",
+    "quote": "Style and precision win every duel.",
     "path": "/legends/ballistic",
     "img": "/images/legends/ballistic.jpg",
     "class": "Assault"
@@ -30,6 +34,7 @@
   {
     "name": "Bangalore",
     "nickname": "Professional Soldier",
+    "quote": "Target spotted. Move fast, hit hard.",
     "path": "/legends/bangalore",
     "img": "/images/legends/bangalore.jpg",
     "class": "Assault"
@@ -37,6 +42,7 @@
   {
     "name": "Bloodhound",
     "nickname": "Technological Tracker",
+    "quote": "I honor those who've risen, not those who've fallen.",
     "path": "/legends/bloodhound",
     "img": "/images/legends/bloodhound.jpg",
     "class": "Recon"
@@ -44,6 +50,7 @@
   {
     "name": "Catalyst",
     "nickname": "Defensive Conjurer",
+    "quote": "Control the battlefield, control the outcome.",
     "path": "/legends/catalyst",
     "img": "/images/legends/catalyst.jpg",
     "class": "Controller"
@@ -51,6 +58,7 @@
   {
     "name": "Caustic",
     "nickname": "Toxic Trapper",
+    "quote": "I feel most alive when rapidly approaching my death.",
     "path": "/legends/caustic",
     "img": "/images/legends/caustic.jpg",
     "class": "Controller"
@@ -58,6 +66,7 @@
   {
     "name": "Conduit",
     "nickname": "Shield Healer",
+    "quote": "Energy up! Let's keep everyone standing.",
     "path": "/legends/conduit",
     "img": "/images/legends/conduit.jpg",
     "class": "Support"
@@ -65,6 +74,7 @@
   {
     "name": "Crypto",
     "nickname": "Surveillance Expert",
+    "quote": "I don't trust anyone.",
     "path": "/legends/crypto",
     "img": "/images/legends/crypto.jpg",
     "class": "Recon"
@@ -72,6 +82,7 @@
   {
     "name": "Fuse",
     "nickname": "Explosives Enthusiast",
+    "quote": "This is gonna be a blast, mate!",
     "path": "/legends/fuse",
     "img": "/images/legends/fuse.jpg",
     "class": "Assault"
@@ -79,6 +90,7 @@
   {
     "name": "Gibraltar",
     "nickname": "Shielded Fortress",
+    "quote": "Don't worry, bruddah, Gibraltar's got your back.",
     "path": "/legends/gibraltar",
     "img": "/images/legends/gibraltar.jpg",
     "class": "Support"
@@ -86,6 +98,7 @@
   {
     "name": "Horizon",
     "nickname": "Gravitational Manipulator",
+    "quote": "Another soft landing.",
     "path": "/legends/horizon",
     "img": "/images/legends/horizon.jpg",
     "class": "Skirmisher"
@@ -93,6 +106,7 @@
   {
     "name": "Lifeline",
     "nickname": "Combat Medic",
+    "quote": "Never leave your squad behind.",
     "path": "/legends/lifeline",
     "img": "/images/legends/lifeline.jpg",
     "class": "Support"
@@ -100,6 +114,7 @@
   {
     "name": "Loba",
     "nickname": "Translocating Thief",
+    "quote": "I'm a woman who knows what she wants.",
     "path": "/legends/loba",
     "img": "/images/legends/loba.jpg",
     "class": "Support"
@@ -107,6 +122,7 @@
   {
     "name": "Mad Maggie",
     "nickname": "Rebel Warlord",
+    "quote": "Fight dirty or die clean.",
     "path": "/legends/mad-maggie",
     "img": "/images/legends/mad-maggie.jpg",
     "class": "Assault"
@@ -114,6 +130,7 @@
   {
     "name": "Mirage",
     "nickname": "Holographic Trickster",
+    "quote": "You got bamboozled!",
     "path": "/legends/mirage",
     "img": "/images/legends/mirage.jpg",
     "class": "Support"
@@ -121,6 +138,7 @@
   {
     "name": "Newcastle",
     "nickname": "Mobile Guardian",
+    "quote": "Heroes never quit on their squad.",
     "path": "/legends/newcastle",
     "img": "/images/legends/newcastle.jpg",
     "class": "Support"
@@ -128,6 +146,7 @@
   {
     "name": "Octane",
     "nickname": "High-Speed Daredevil",
+    "quote": "Faster! Faster! Faster!",
     "path": "/legends/octane",
     "img": "/images/legends/octane.jpg",
     "class": "Skirmisher"
@@ -135,6 +154,7 @@
   {
     "name": "Pathfinder",
     "nickname": "Forward Scout",
+    "quote": "Hi friends!",
     "path": "/legends/pathfinder",
     "img": "/images/legends/pathfinder.jpg",
     "class": "Skirmisher"
@@ -142,6 +162,7 @@
   {
     "name": "Rampart",
     "nickname": "Base of Fire",
+    "quote": "If you can't keep up, stay out of the way.",
     "path": "/legends/rampart",
     "img": "/images/legends/rampart.jpg",
     "class": "Controller"
@@ -149,6 +170,7 @@
   {
     "name": "Revenant",
     "nickname": "Synthetic Nightmare",
+    "quote": "I'm not thanking you.",
     "path": "/legends/revenant",
     "img": "/images/legends/revenant.jpg",
     "class": "Assault"
@@ -156,6 +178,7 @@
   {
     "name": "Seer",
     "nickname": "Ambush Artist",
+    "quote": "The spotlight reveals all.",
     "path": "/legends/seer",
     "img": "/images/legends/seer.jpg",
     "class": "Recon"
@@ -163,6 +186,7 @@
   {
     "name": "Sparrow",
     "nickname": "Agile Archer",
+    "quote": "Precision strikes before panic.",
     "path": "/legends/sparrow",
     "img": "/images/legends/sparrow.jpg",
     "class": "Recon"
@@ -170,6 +194,7 @@
   {
     "name": "Valkyrie",
     "nickname": "Winged Avenger",
+    "quote": "Valkyrie's got you in the pipe, five by five.",
     "path": "/legends/valkyrie",
     "img": "/images/legends/valkyrie.jpg",
     "class": "Recon"
@@ -177,6 +202,7 @@
   {
     "name": "Vantage",
     "nickname": "Survivalist Sniper",
+    "quote": "Spot first. Shoot second.",
     "path": "/legends/vantage",
     "img": "/images/legends/vantage.jpg",
     "class": "Recon"
@@ -184,6 +210,7 @@
   {
     "name": "Wattson",
     "nickname": "Static Defender",
+    "quote": "Electricity I get. People I don't.",
     "path": "/legends/wattson",
     "img": "/images/legends/wattson.jpg",
     "class": "Controller"
@@ -191,6 +218,7 @@
   {
     "name": "Wraith",
     "nickname": "Interdimensional Skirmisher",
+    "quote": "There's a thin line between life and death.",
     "path": "/legends/wraith",
     "img": "/images/legends/wraith.jpg",
     "class": "Skirmisher"
