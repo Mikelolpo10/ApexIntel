@@ -2,7 +2,6 @@ import { Link } from 'react-router';
 import Header from '../components/Header';
 import NewsCard from '../components/NewsCard';
 import Footer from '../components/Footer';
-import { useState } from 'react';
 
 export default function ApexInsightHomepage() {
   const newsArticles = [
@@ -116,7 +115,7 @@ export default function ApexInsightHomepage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {newsArticles.map((news) => (
-                <NewsCard news={news} />
+                <NewsCard key={news.title} news={news} />
               ))}
             </div>
           </section>
