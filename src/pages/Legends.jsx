@@ -1,20 +1,37 @@
+import axios from 'axios'
+import { useQuery } from "@tanstack/react-query"
 import { useParams } from "react-router"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-import ErrorPage from "./ErrorPage"
-import legendsData from '../data/legendsData.json'
+import ErrorPage from "./ErrorPage.jsx"
+
+const API_URL = import.meta.env.VITE_API_URL
 
 export default function Legends() {
   const params = useParams()
-  const legendInfo = legendsData.find(item => item.name.toLocaleLowerCase() === params.name)
-  const abilities = [
+  const { data: legendInfo, isLoading, isError } = useQuery({
+    queryKey: ['legendInfo'],
+    queryFn: async () => {
+      try {
+        const res = await axios.get(`${API_URL}/legends/legendsdata/${params.name}`)
+        return res.data
+      } catch {
+        console.log(`Legend data fetch error`)
+        throw new Error
+      }
+    }
+  })
+  const abilities = legendInfo 
+  ? [
     { type: "Passive", ...legendInfo.passive },
     { type: "Tactical", ...legendInfo.tactical },
     { type: "Ultimate", ...legendInfo.ultimate }
-  ]
+  ] : []
 
-  if (!legendInfo) return <ErrorPage />
+  if (isError) return <ErrorPage />
 
+  if (isLoading) return <h1>Wait</h1>
+  
   return (
     <>
       <title>{`${legendInfo?.name} - ${legendInfo?.nickname}`}</title>

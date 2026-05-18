@@ -1,3 +1,5 @@
+import axios from "axios"
+import { useQuery } from "@tanstack/react-query"
 import { useState } from "react"
 import Header from "../components/Header.jsx"
 import Footer from '../components/Footer.jsx'
@@ -9,7 +11,8 @@ import reconClassIcon from '../assets/icon/recon-class.png'
 import supportClassIcon from '../assets/icon/support-class.png'
 import controllerClassIcon from '../assets/icon/controller-class.png'
 import legendsClass from '../data/legendsClass.json'
-import legendsData from '../data/legendsData.json'
+
+const API_URL = import.meta.env.VITE_API_URL
 
 export default function LegendsMenu() {
   const [selectedClass, setselectedClass] = useState('ALL')
@@ -43,6 +46,21 @@ export default function LegendsMenu() {
       description: 'The Controller class is designed to control space and defend important areas. These Legends use traps, barriers, and zone-control abilities to limit enemy movement and protect their team.'
     }
   ]
+
+  const { data: legendsData, isLoading } = useQuery({
+    queryKey: ['legendsData'],
+    queryFn: async () => {
+      try {
+        const res = await axios.get(`${API_URL}/legends/legendsdata`)
+        return res.data
+      } catch {
+        console.log('Legends data error fetch')
+        throw new Error
+      }
+    }
+  })
+
+  if (isLoading) return <h1>WAIT</h1>
 
   return (
     <>
