@@ -46,6 +46,19 @@ export default function LegendsMenu() {
     }
   ]
 
+  const { data: legendsClass, isLoading: classLoading } = useQuery({
+    queryKey: ['legendsClass'],
+    queryFn: async () => {
+      try {
+        const res = await axios.get(`${API_URL}/legends/legendsclass`)
+        return res.data
+      } catch {
+        console.log('Legends class error fetch')
+        throw new Error
+      }
+    }
+  })
+
   const { data: legendsData, isLoading } = useQuery({
     queryKey: ['legendsData'],
     queryFn: async () => {
@@ -59,7 +72,7 @@ export default function LegendsMenu() {
     }
   })
 
-  if (isLoading) return <h1>WAIT</h1>
+  if (classLoading || isLoading) return <h1>WAIT</h1>
 
   return (
     <>
