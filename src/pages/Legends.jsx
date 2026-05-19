@@ -83,7 +83,7 @@ export default function Legends() {
               {/* Right Side */}
               <div className="p-4 mr-36 flex flex-col max-h-fit items-center min-w-80 max-w-80 border border-text-disabled bg-overlay-gray-heavy text-text-secondary">
                 <div className="mb-4">
-                  <img src={legendInfo.img} alt={legendInfo.name} className="object-contain" />
+                  <img src={legendInfo.img} alt={legendInfo.name} fetchPriority='high' className="object-contain" />
                 </div>
                 <strong className="mb-1 text-lg">- Details -</strong>
                 <span className="mr-auto"><strong>Real Name: </strong>{legendInfo.name}</span>
