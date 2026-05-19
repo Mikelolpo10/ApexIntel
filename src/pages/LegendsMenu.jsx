@@ -4,13 +4,12 @@ import { useState } from "react"
 import Header from "../components/Header.jsx"
 import Footer from '../components/Footer.jsx'
 import MainCard from "../components/MainCard.jsx"
-import legendsClassIcon from '../assets/icon/legends-class.png'
-import assaultClassIcon from '../assets/icon/assault-class.png'
-import skirmisherClassIcon from '../assets/icon/skirmisher-class.png'
-import reconClassIcon from '../assets/icon/recon-class.png'
-import supportClassIcon from '../assets/icon/support-class.png'
-import controllerClassIcon from '../assets/icon/controller-class.png'
-import legendsClass from '../data/legendsClass.json'
+import legendsClassIcon from '../assets/icon/legends-class.webp'
+import assaultClassIcon from '../assets/icon/assault-class.webp'
+import skirmisherClassIcon from '../assets/icon/skirmisher-class.webp'
+import reconClassIcon from '../assets/icon/recon-class.webp'
+import supportClassIcon from '../assets/icon/support-class.webp'
+import controllerClassIcon from '../assets/icon/controller-class.webp'
 
 const API_URL = import.meta.env.VITE_API_URL
 
@@ -74,7 +73,7 @@ export default function LegendsMenu() {
           <div className="w-full flex">
             <img
               src={classIcons[selectedClass]}
-              alt="Legends class icon" className="h-36" />
+              alt="Legends class icon" className="h-36 w-36" />
             <div className="pl-4 flex flex-col gap-2">
               <h3 className="pt-4 text-2xl font-bold">{selectedClass === 'ALL' ? 'Legends' : selectedClass} Class</h3>
               <p className="mr-[40%]">
