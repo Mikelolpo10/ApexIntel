@@ -68,10 +68,6 @@ export default function ApexInsightHomepage() {
       <title>ApexIntel</title>
 
       <div className="min-h-screen text-white">
-
-        {/* Header */}
-        <Header />
-
         <main className="main">
           {/* Hero Section - Featured Article */}
           <section className="max-w-7xl mx-auto px-6 py-12">
@@ -134,9 +130,6 @@ export default function ApexInsightHomepage() {
             </div>
           </section>
         </main>
-
-        {/* Footer */}
-        <Footer />
       </div>
     </>
   );

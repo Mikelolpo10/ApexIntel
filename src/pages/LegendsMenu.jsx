@@ -78,8 +78,6 @@ export default function LegendsMenu() {
     <>
       <title>Legends</title>
 
-      <Header />
-
       <main className="main">
         {/* Legends Selection */}
         <section className="my-8">
@@ -141,7 +139,6 @@ export default function LegendsMenu() {
         </section>
       </main>
 
-      <Footer />
     </>
   )
 }

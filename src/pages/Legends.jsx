@@ -45,8 +45,6 @@ export default function Legends() {
       />
 
       <div className="min-h-screen">
-        <Header />
-
         <main className="main">
           <section className="relative my-8 before:content-[''] before:absolute before:inset-0 before:bg-overlay-medium before:blur-[xl] before:-z-1">
             <div className="py-1 px-1 inline border border-text-secondary rounded-sm text-sm font-semibold">{legendInfo.class} Class Legends</div>
@@ -99,8 +97,6 @@ export default function Legends() {
             </div>
           </section>
         </main>
-
-        <Footer />
       </div>
     </>
   )
