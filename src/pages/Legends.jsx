@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query"
 import { useParams } from "react-router"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-import ErrorPage from "./ErrorPage.jsx"
+import ErrorPage from "./PageNotFound.jsx"
 
 const API_URL = import.meta.env.VITE_API_URL
 
@@ -21,17 +21,17 @@ export default function Legends() {
       }
     }
   })
-  const abilities = legendInfo 
-  ? [
-    { type: "Passive", ...legendInfo.passive },
-    { type: "Tactical", ...legendInfo.tactical },
-    { type: "Ultimate", ...legendInfo.ultimate }
-  ] : []
+  const abilities = legendInfo
+    ? [
+      { type: "Passive", ...legendInfo.passive },
+      { type: "Tactical", ...legendInfo.tactical },
+      { type: "Ultimate", ...legendInfo.ultimate }
+    ] : []
 
-  if (isError) return <ErrorPage />
+  if (!legendInfo || isError) return <ErrorPage />
 
   if (isLoading) return <h1>Wait</h1>
-  
+
   return (
     <>
       <title>{`${legendInfo?.name} - ${legendInfo?.nickname}`}</title>
