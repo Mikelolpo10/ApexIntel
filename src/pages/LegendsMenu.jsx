@@ -137,7 +137,6 @@ export default function LegendsMenu() {
           </div>
         </section>
       </main>
-
     </>
   )
 }
