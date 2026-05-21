@@ -1,18 +1,18 @@
+import axios from "axios"
+import { useQuery } from "@tanstack/react-query"
 import { useState } from "react"
-import Header from "../components/Header.jsx"
-import Footer from '../components/Footer.jsx'
 import MainCard from "../components/MainCard.jsx"
-import legendsClassIcon from '../assets/icon/legends-class.png'
-import assaultClassIcon from '../assets/icon/assault-class.png'
-import skirmisherClassIcon from '../assets/icon/skirmisher-class.png'
-import reconClassIcon from '../assets/icon/recon-class.png'
-import supportClassIcon from '../assets/icon/support-class.png'
-import controllerClassIcon from '../assets/icon/controller-class.png'
-import legendsClass from '../data/legendsClass.json'
-import legendsData from '../data/legendsData.json'
+
+const API_URL = import.meta.env.VITE_API_URL
 
 export default function LegendsMenu() {
   const [selectedClass, setselectedClass] = useState('ALL')
+  const legendsClassIcon = '/images/icon/legends-class.webp'
+  const assaultClassIcon = '/images/icon/assault-class.webp'
+  const skirmisherClassIcon = '/images/icon/skirmisher-class.webp'
+  const reconClassIcon = '/images/icon/recon-class.webp'
+  const supportClassIcon = '/images/icon/support-class.webp'
+  const controllerClassIcon = '/images/icon/controller-class.webp'
   const classIcons = {
     ALL: legendsClassIcon,
     Assault: assaultClassIcon,
@@ -44,11 +44,37 @@ export default function LegendsMenu() {
     }
   ]
 
+  const { data: legendsClass, isLoading: classLoading } = useQuery({
+    queryKey: ['legendsClass'],
+    queryFn: async () => {
+      try {
+        const res = await axios.get(`${API_URL}/legends/legendsclass`)
+        return res.data
+      } catch {
+        console.log('Legends class error fetch')
+        throw new Error
+      }
+    }
+  })
+
+  const { data: legendsData, isLoading } = useQuery({
+    queryKey: ['legendsData'],
+    queryFn: async () => {
+      try {
+        const res = await axios.get(`${API_URL}/legends/legendsdata`)
+        return res.data
+      } catch {
+        console.log('Legends data error fetch')
+        throw new Error
+      }
+    }
+  })
+
+  if (classLoading || isLoading) return <h1>WAIT</h1>
+
   return (
     <>
       <title>Legends</title>
-
-      <Header />
 
       <main className="main">
         {/* Legends Selection */}
@@ -56,7 +82,7 @@ export default function LegendsMenu() {
           <div className="w-full flex">
             <img
               src={classIcons[selectedClass]}
-              alt="Legends class icon" className="h-36" />
+              alt="Legends class icon" className="h-36 w-36" />
             <div className="pl-4 flex flex-col gap-2">
               <h3 className="pt-4 text-2xl font-bold">{selectedClass === 'ALL' ? 'Legends' : selectedClass} Class</h3>
               <p className="mr-[40%]">
@@ -111,7 +137,6 @@ export default function LegendsMenu() {
         </section>
       </main>
 
-      <Footer />
     </>
   )
 }
