@@ -1,20 +1,18 @@
 import axios from "axios"
 import { useQuery } from "@tanstack/react-query"
 import { useState } from "react"
-import Header from "../components/Header.jsx"
-import Footer from '../components/Footer.jsx'
 import MainCard from "../components/MainCard.jsx"
-import legendsClassIcon from '../assets/icon/legends-class.webp'
-import assaultClassIcon from '../assets/icon/assault-class.webp'
-import skirmisherClassIcon from '../assets/icon/skirmisher-class.webp'
-import reconClassIcon from '../assets/icon/recon-class.webp'
-import supportClassIcon from '../assets/icon/support-class.webp'
-import controllerClassIcon from '../assets/icon/controller-class.webp'
 
 const API_URL = import.meta.env.VITE_API_URL
 
 export default function LegendsMenu() {
   const [selectedClass, setselectedClass] = useState('ALL')
+  const legendsClassIcon = '/images/icon/legends-class.webp'
+  const assaultClassIcon = '/images/icon/assault-class.webp'
+  const skirmisherClassIcon = '/images/icon/skirmisher-class.webp'
+  const reconClassIcon = '/images/icon/recon-class.webp'
+  const supportClassIcon = '/images/icon/support-class.webp'
+  const controllerClassIcon = '/images/icon/controller-class.webp'
   const classIcons = {
     ALL: legendsClassIcon,
     Assault: assaultClassIcon,
