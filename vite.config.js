@@ -10,7 +10,5 @@ export default defineConfig(({mode}) => ({
     babel({ presets: [reactCompilerPreset()] }),
     tailwindcss(),
   ],
-  base: mode === 'production'
-    ? '/ApexIntel/'
-    : '/'
+  base: '/'
 }))
