@@ -29,7 +29,6 @@ export default function Legends() {
   if (!legendInfo || isError) return <ErrorPage />
 
   if (isLoading) return <h1>Wait</h1>
-  console.log(abilities)
 
   return (
     <>
