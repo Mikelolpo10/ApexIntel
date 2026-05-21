@@ -54,7 +54,8 @@ export default function LegendsMenu() {
         console.log('Legends class error fetch')
         throw new Error
       }
-    }
+    },
+    staleTime: 1000 * 60 * 5
   })
 
   const { data: legendsData, isLoading } = useQuery({

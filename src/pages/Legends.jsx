@@ -17,7 +17,8 @@ export default function Legends() {
         console.log(`Legend data fetch error`)
         throw new Error
       }
-    }
+    },
+    staleTime: 1000 * 60 * 5
   })
   const abilities = legendInfo
     ? [
