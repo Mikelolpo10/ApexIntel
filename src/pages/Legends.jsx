@@ -1,8 +1,6 @@
 import axios from 'axios'
 import { useQuery } from "@tanstack/react-query"
 import { useParams } from "react-router"
-import Header from "../components/Header"
-import Footer from "../components/Footer"
 import ErrorPage from "./PageNotFound.jsx"
 
 const API_URL = import.meta.env.VITE_API_URL
@@ -31,6 +29,7 @@ export default function Legends() {
   if (!legendInfo || isError) return <ErrorPage />
 
   if (isLoading) return <h1>Wait</h1>
+  console.log(abilities)
 
   return (
     <>
