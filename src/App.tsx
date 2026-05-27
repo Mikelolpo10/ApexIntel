@@ -1,14 +1,14 @@
 import { Routes, Route } from 'react-router'
 import { Suspense, lazy } from 'react'
 
-const Homepage = lazy(() => import('./pages/Homepage.jsx'))
-const LegendsMenu = lazy(() => import('./pages/LegendsMenu.jsx'))
-const Legends = lazy(() => import('./pages/Legends.jsx'))
-import LoadingPage from './components/LoadingPage.jsx'
-import ErrorPage from './pages/PageNotFound.jsx'
-import MainLayout from './components/MainLayout.jsx'
+const Homepage = lazy(() => import('./pages/Homepage.js'))
+const LegendsMenu = lazy(() => import('./pages/LegendsMenu.js'))
+const Legends = lazy(() => import('./pages/Legends.js'))
+import LoadingPage from './components/LoadingPage.js'
+import ErrorPage from './pages/PageNotFound.js'
+import MainLayout from './components/MainLayout.js'
 
-import ScrollToTop from './components/ScrollToTop.jsx'
+import ScrollToTop from './components/ScrollToTop.js'
 import './App.css'
 
 function App() {

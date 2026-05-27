@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useQuery } from "@tanstack/react-query"
 import { useState } from "react"
-import MainCard from "../components/MainCard.jsx"
+import MainCard from "../components/MainCard.js"
 
 const API_URL = import.meta.env.VITE_API_URL
 

@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useQuery } from "@tanstack/react-query"
 import { useParams } from "react-router"
-import ErrorPage from "./PageNotFound.jsx"
+import ErrorPage from "./PageNotFound.js"
 
 const API_URL = import.meta.env.VITE_API_URL
 
