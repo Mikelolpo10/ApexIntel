@@ -1,7 +1,7 @@
 import { NavLink } from "react-router";
 
 export default function Header() {
-  const navItems = ['HOME', 'LEGENDS', 'WEAPONS', 'TOURNAMENTS', 'GUIDES', 'COMMUNITY'];
+  const navItems: string[] = ['HOME', 'LEGENDS', 'WEAPONS', 'TOURNAMENTS', 'GUIDES', 'COMMUNITY'];
 
   return (
     <header className="bg-overlay-gray-heavy backdrop-blur-sm border-b border-white/10 sticky top-0 text-white z-50">

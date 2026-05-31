@@ -1,10 +1,9 @@
 import { Link } from 'react-router';
-import Header from '../components/Header';
 import NewsCard from '../components/NewsCard';
-import Footer from '../components/Footer';
+import type { News } from '../types/News';
 
 export default function ApexInsightHomepage() {
-  const newsArticles = [
+  const newsArticles: News[] = [
     {
       id: 1,
       category: 'PATCH NOTES',
@@ -55,7 +54,7 @@ export default function ApexInsightHomepage() {
     }
   ];
 
-  const featuredArticle = {
+  const featuredArticle: News = {
     category: 'BREAKING NEWS',
     title: 'Broken Moon map receives major update with new POI locations',
     quote: 'Respawn has announced sweeping changes to the Broken Moon map, introducing three new points of interest and revamping existing areas based on player feedback and competitive balance.',

@@ -1,14 +1,21 @@
 import axios from 'axios'
 import { useQuery } from "@tanstack/react-query"
 import { useParams } from "react-router"
-import ErrorPage from "./PageNotFound.jsx"
+import ErrorPage from "./PageNotFound.js"
 
 const API_URL = import.meta.env.VITE_API_URL
 
 export default function Legends() {
+  type Ability = {
+    type: "Passive" | "Tactical" | "Ultimate"
+    img: string
+    name: string
+    description: string
+  }
+
   const params = useParams()
   const { data: legendInfo, isLoading, isError } = useQuery({
-    queryKey: ['legendInfo'],
+    queryKey: ['legendInfo', params.name],
     queryFn: async () => {
       try {
         const res = await axios.get(`${API_URL}/legends/legendsdata/${params.name}`)
@@ -20,16 +27,16 @@ export default function Legends() {
     },
     staleTime: 1000 * 60 * 5
   })
-  const abilities = legendInfo
+  const abilities: Ability[] = legendInfo
     ? [
       { type: "Passive", ...legendInfo.passive },
       { type: "Tactical", ...legendInfo.tactical },
       { type: "Ultimate", ...legendInfo.ultimate }
     ] : []
 
-  if (!legendInfo || isError) return <ErrorPage />
-
-  if (isLoading) return <h1>Wait</h1>
+    if (isLoading) return <h1>Wait</h1>
+    
+    if (!legendInfo || isError) return <ErrorPage />
 
   return (
     <>

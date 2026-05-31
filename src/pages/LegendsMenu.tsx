@@ -1,19 +1,32 @@
 import axios from "axios"
 import { useQuery } from "@tanstack/react-query"
 import { useState } from "react"
-import MainCard from "../components/MainCard.jsx"
+import MainCard from "../components/MainCard.js"
+import type { Legend } from "../types/Legend.js"
 
 const API_URL = import.meta.env.VITE_API_URL
 
 export default function LegendsMenu() {
-  const [selectedClass, setselectedClass] = useState('ALL')
+  type LegendsClassDescription = {
+    className: string;
+    description: string;
+  }
+  type LegendClass =
+    | 'ALL'
+    | 'Assault'
+    | 'Skirmisher'
+    | 'Recon'
+    | 'Support'
+    | 'Controller'
+
+  const [selectedClass, setSelectedClass] = useState<LegendClass>('ALL')
   const legendsClassIcon = '/images/icon/legends-class.webp'
   const assaultClassIcon = '/images/icon/assault-class.webp'
   const skirmisherClassIcon = '/images/icon/skirmisher-class.webp'
   const reconClassIcon = '/images/icon/recon-class.webp'
   const supportClassIcon = '/images/icon/support-class.webp'
   const controllerClassIcon = '/images/icon/controller-class.webp'
-  const classIcons = {
+  const classIcons: Record<LegendClass, string> = {
     ALL: legendsClassIcon,
     Assault: assaultClassIcon,
     Skirmisher: skirmisherClassIcon,
@@ -21,7 +34,7 @@ export default function LegendsMenu() {
     Support: supportClassIcon,
     Controller: controllerClassIcon,
   }
-  const legendsClassDescription = [
+  const legendsClassDescription: LegendsClassDescription[] = [
     {
       className: 'Assault',
       description: 'The Assault class in Apex Legends focuses on aggressive combat and frontline pressure. These Legends are designed to deal heavy damage, push enemy squads, and create openings during fights.'
@@ -99,7 +112,7 @@ export default function LegendsMenu() {
           </div>
 
           <nav className="relative mt-12 flex gap-2 text-text-muted font-semibold before:content-[''] before:absolute before:left-0 before:bottom-0 before:w-full before:h-0.5 before:bg-overlay-gray-light box-content">
-            {['ALL', ...Object.keys(legendsClass)].map((className) => (
+            {(['ALL', ...Object.keys(legendsClass)] as LegendClass[]).map((className) => (
               <div
                 key={className}
                 className={`
@@ -109,7 +122,7 @@ export default function LegendsMenu() {
                     : 'hover:text-white'
                   }
                 `}
-                onClick={() => setselectedClass(className)}
+                onClick={() => setSelectedClass(className)}
               >
                 {className === 'ALL' ? className : `${className} Class Legends`}
               </div>
@@ -120,11 +133,11 @@ export default function LegendsMenu() {
             {
               legendsData
                 .filter(
-                  (legend) =>
+                  (legend: Legend) =>
                     selectedClass === 'ALL' ||
                     legend.class === selectedClass
                 )
-                .map(({ name, nickname, path, img }) => (
+                .map(({ name, nickname, path, img }: Legend) => (
                   <MainCard
                     key={name}
                     name={name}
