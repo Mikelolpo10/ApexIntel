@@ -1,6 +1,11 @@
 import { NavLink } from "react-router"
+import type { News } from "../types/News"
 
-export default function NewsCard({ news }) {
+type NewsCardProps = {
+  news: News;
+};
+
+export default function NewsCard({ news }: NewsCardProps) {
   return (
     <NavLink key={news.id} to='/news/id' className="group bg-black/40 rounded-lg overflow-hidden hover:bg-black/60 transition-colors cursor-pointer border border-white/10">
     <div className="relative overflow-hidden">

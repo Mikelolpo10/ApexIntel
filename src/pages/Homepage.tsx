@@ -1,16 +1,8 @@
 import { Link } from 'react-router';
 import NewsCard from '../components/NewsCard';
+import type { News } from '../types/News';
 
 export default function ApexInsightHomepage() {
-  type News = {
-    id?: number 
-    category: string
-    title: string
-    quote: string
-    image: string
-    time: string
-  }
-  
   const newsArticles: News[] = [
     {
       id: 1,
