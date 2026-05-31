@@ -1,6 +1,7 @@
 import { Link } from "react-router"
+import type { Legend } from "../types/Legend"
 
-export default function MainCard({ name, nickname, path, img }) {
+export default function MainCard({ name, nickname, path, img }: Legend) {
   return (
     <Link to={path} className="group relative flex flex-col items-center justify-center border-overlay-gray-light border rounded-2xl bg-overlay-medium overflow-hidden">
       <img src={img} alt={name} className="hover:brightness-10 transition-all duration-200" />

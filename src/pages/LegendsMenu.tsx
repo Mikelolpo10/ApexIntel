@@ -2,6 +2,7 @@ import axios from "axios"
 import { useQuery } from "@tanstack/react-query"
 import { useState } from "react"
 import MainCard from "../components/MainCard.js"
+import type { Legend } from "../types/Legend.js"
 
 const API_URL = import.meta.env.VITE_API_URL
 
@@ -17,13 +18,6 @@ export default function LegendsMenu() {
     | 'Recon'
     | 'Support'
     | 'Controller'
-  type Legend = {
-    class: string;
-    name: string;
-    nickname: string;
-    path: string;
-    img: string;
-  }
 
   const [selectedClass, setSelectedClass] = useState<LegendClass>('ALL')
   const legendsClassIcon = '/images/icon/legends-class.webp'
